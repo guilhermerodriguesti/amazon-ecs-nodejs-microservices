@@ -41,7 +41,7 @@ printf "${PRIMARY}* Authenticating with EC2 Container Repository${NC}\n";
 `aws ecr get-login --region $REGION --no-include-email`
 
 # Tag for versioning the container images, currently set to timestamp
-TAG=`date +%s`
+TAG=`git rev-parse --short HEAD`
 
 for SERVICE_NAME in "${DEPLOYABLE_SERVICES[@]}"
 do
