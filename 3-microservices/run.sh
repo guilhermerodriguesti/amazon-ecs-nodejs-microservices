@@ -10,4 +10,4 @@ aws cloudformation deploy \
 
 echo "2. Deploy the services onto your cluster"
 
-./deploy us-east-1 ecs-node
+sh deploy.sh us-east-1 ecs-node
